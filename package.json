@@ -1,0 +1,22 @@
+{
+  "name": "scrappy",
+  "version": "0.0.1",
+  "description": "A scrappy little sandbox you can use for front-end performance testing.",
+  "author": "Alex MacArthur <alex@macarthur.me> (https://macarthur.me)",
+  "license": "MIT",
+  "scripts": {
+    "serve": "node server.js",
+    "test": "pwmetrics"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexmacarthur/scrappy.git"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "glob": "^7.1.3",
+    "pug": "^2.0.3",
+    "pwmetrics": "^4.1.0",
+    "spdy": "^3.4.7"
+  }
+}
