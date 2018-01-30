@@ -1,0 +1,22 @@
+{
+  "name": "scrappy",
+  "version": "0.0.0",
+  "description": "A scrappy set of routes you can use for performance testing.",
+  "author": "Alex MacArthur <alex@macarthur.me> (https://macarthur.me)",
+  "license": "MIT",
+  "scripts": {
+    "serve": "node server.js",
+    "test": "pwmetrics"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexmacarthur/scrappy.git"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "glob": "^7.1.2",
+    "pug": "^2.0.0-rc.4",
+    "pwmetrics": "^3.1.4",
+    "spdy": "^3.4.7"
+  }
+}
