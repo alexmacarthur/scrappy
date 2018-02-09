@@ -8,7 +8,7 @@ Clone this repo and run `yarn install` to install dependencies. To kick off a se
 ### Setting up SSL Locally
 This project comes with an SSL certificate to run locally, but you'll need to set up your machine to trust it. Open up your Keychain Access, select "System" and "Certificates." Import the `rootCA.pem` file in this repo, double click it, and change the dropdown to 'Always Trust'.
 
-!(https://cdn-images-1.medium.com/max/1600/1*NWwMb0yV9ClHDj87Kug9Ng.png)
+![Successfully Trusting Certificate](https://cdn-images-1.medium.com/max/1600/1*NWwMb0yV9ClHDj87Kug9Ng.png)
 
 You can find more information on how to do this [here](https://medium.freecodecamp.org/how-to-get-https-working-on-your-local-development-environment-in-5-minutes-7af615770eec). 
 
