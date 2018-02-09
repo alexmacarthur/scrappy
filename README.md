@@ -5,6 +5,13 @@ Scrappy is a sandbox test suite for performance testing on your local machine. I
 ## Installation
 Clone this repo and run `yarn install` to install dependencies. To kick off a server, run `yarn run serve`. This will create routes for all scenarios that have been placed into the `scenarios` directory.
 
+### Setting up SSL Locally
+This project comes with an SSL certificate to run locally, but you'll need to set up your machine to trust it. Open up your Keychain Access, select "System" and "Certificates." Import the `rootCA.pem` file in this repo, double click it, and change the dropdown to 'Always Trust'.
+
+!(https://cdn-images-1.medium.com/max/1600/1*NWwMb0yV9ClHDj87Kug9Ng.png)
+
+You can find more information on how to do this [here](https://medium.freecodecamp.org/how-to-get-https-working-on-your-local-development-environment-in-5-minutes-7af615770eec). 
+
 ## Create a Scenario
 Routes are dynamically generated based on on pug files that are placed into the `scenarios` directory. Adding new files and restarting the server will create a new scenario.
 
