@@ -1,8 +1,16 @@
+const spdy = require('spdy');
 const glob = require('glob');
 const express = require('express');
 const app = express();
 const copy = require('./data/copy.js').copy;
+const path = require('path');
+const fs = require('fs');
 const port = 3000;
+
+const options = {
+  key: fs.readFileSync(`${__dirname}/ssl/server.key`),
+  cert: fs.readFileSync(`${__dirname}/ssl/server.crt`)
+};
 
 app.set('view engine', 'pug');
 app.set('views', './scenarios');
@@ -33,7 +41,15 @@ scenarios.forEach(route => {
   });
 });
 
-app.listen(port, () => {
-  console.log('\x1b[32m%s\x1b[32m', `Open https://localhost:${port}.`);
-  console.log('\x1b[0m%s\x1b[0m', 'To close, press CONTROL + C.\n');
-});
+spdy
+  .createServer(options, app)
+  .listen(port, (error) => {
+    if (error) {
+      console.error(error);
+      return process.exit(1);
+    } else {
+      console.log('\x1b[32m%s\x1b[32m', `Open https://localhost:${port}.`);
+      console.log('\x1b[0m%s\x1b[0m', 'To close, press CONTROL + C.\n');
+    }
+  });
+
